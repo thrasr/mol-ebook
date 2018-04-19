@@ -94,11 +94,12 @@ if [[ ! -e ${OUTNAME}.mobi ]]; then
     echo 'building mobi...'
     kindlegen ${OUTNAME}.epub
 
-    rm -i mobi7-$OUTPREFIX-*.mobi
-    echo 'extracting mobi7...'
+    # mobi7 format for old kindles
     # cd .. && git clone https://github.com/kevinhendricks/KindleUnpack.git
-    python ../KindleUnpack/lib/kindleunpack.py -s ${OUTNAME}.mobi
-    cp ${OUTNAME}/mobi7-${OUTNAME}.mobi .
-    rm -rf $OUTNAME
+    #rm -i mobi7-$OUTPREFIX-*.mobi
+    #echo 'extracting mobi7...'
+    #python ../KindleUnpack/lib/kindleunpack.py -s ${OUTNAME}.mobi
+    #cp ${OUTNAME}/mobi7-${OUTNAME}.mobi .
+    #rm -rf $OUTNAME
 fi
 
